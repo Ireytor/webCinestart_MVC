@@ -1,0 +1,25 @@
+﻿
+@model List<webCinestart_MVC.Models.Cine> 
+@{ 
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h1>Nuestros Cines</h1>
+<br />
+
+@foreach (var cine in Model)
+
+{    <div class="contenido-cine">
+        <img src="../Contents/img/cine/@cine.id.1.jpg" width="227" height="170" />
+        <div class="datos-cine">
+            <h4>@cine.RazonSocial</h4><br />
+            <span>@cine.Direccion = @cine.Detalle<br /><br />Telefono: @cine.Telefonos</span>
+        </div>
+        <br />
+        <a href="@Url.Action( "Cine", "Cinestar", new {id = cine.id})">
+            <img src="../Contents/img/varios/ico-info2.png" width="150" height="40" />
+        </a>
+    </div>   
+}
