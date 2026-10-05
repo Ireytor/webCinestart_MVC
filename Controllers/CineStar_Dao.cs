@@ -23,5 +23,38 @@ namespace webCinestart_MVC.Controllers
                 cines.Add(new Cine(dr));
             return cines;
         }
+
+
+        internal Pelicula getPelicula(int id)
+        {
+            db.Sentencia($"exec sp_getPelicula {id}");
+            DataTable dt = db.getDataTable();
+
+            if (dt == null || dt.Rows.Count == 0) return null;
+
+            return new Pelicula(dt.Rows[0]);
+        }
+
+        internal List<Pelicula> getPeliculas(int idEstado)
+        {
+            db.Sentencia($"exec sp_getPeliculas {idEstado}");
+            DataTable dt = db.getDataTable();
+            if (dt == null) return null;
+
+            List<Pelicula> peliculas = new List<Pelicula>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                peliculas.Add(new Pelicula
+                {
+                    id = int.Parse(dr["id"].ToString()),
+                    Titulo = dr["Titulo"].ToString(),
+                    Sinopsis = dr["Sinopsis"].ToString(),
+                    Link = dr["Link"].ToString()
+                }); 
+            }
+
+            return peliculas; 
+        }
+
     }
 }

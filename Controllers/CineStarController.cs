@@ -18,5 +18,19 @@ namespace webCinestart_MVC.Controllers
         {
             return View(cineStar_Dao.getCines());
         }
+
+        public ActionResult Pelicula(int id)
+        {
+            var peli = cineStar_Dao.getPelicula(id);
+            return View(peli);
+        }
+
+        public ActionResult Peliculas(string id)
+        {
+            int idEstado = (id == "cartelera") ? 1 : 2;
+            var peliculas = cineStar_Dao.getPeliculas(idEstado);
+            ViewBag.Titulo = (id == "cartelera") ? "Cartelera" : "Próximos Estrenos";
+            return View(peliculas);
+        }
     }
 }

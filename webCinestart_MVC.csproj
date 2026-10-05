@@ -185,6 +185,8 @@
     <Content Include="Views\web.config" />
     <Content Include="Views\CineStar\Index.cshtml" />
     <Content Include="Views\CineStar\Cine.cshtml" />
+    <Content Include="Views\CineStar\Pelicula.cshtml" />
+    <Content Include="Views\CineStar\Peliculas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
