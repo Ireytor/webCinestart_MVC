@@ -15,11 +15,15 @@ Características principales:
 • Gestión de recursos y rutas: Integración correcta de hojas de estilo, imágenes y rutas relativas del proyecto para una visualización estable en el navegador.
 
 
+
 Tecnologías utilizadas:
 
 • Visual Studio (ASP.NET MVC / C#)
+
 • SQL Server
+
 • HTML5 y CSS3
+
 
 <img width="1908" height="1027" alt="image" src="https://github.com/user-attachments/assets/36130ea7-00f4-4a05-892d-980ad72f659d" />
 
