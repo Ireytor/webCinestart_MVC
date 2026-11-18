@@ -5,10 +5,15 @@ Aplicación web desarrollada en Visual Studio bajo el patrón de arquitectura MV
 Características principales:
 
 • Arquitectura MVC: Separación estructurada entre modelos, vistas y controladores para mantener un código limpio, ordenado y fácil de escalar.
+
 • Conexión a SQL Server: Implementación de una clase DAO optimizada para gestionar la comunicación y las consultas con la base de datos.
+
 • Cartelera y estrenos dinámicos: Generación automática del listado de películas mediante métodos en el controlador y recorridos con ciclos foreach en las vistas.
+
 • Vista de detalle individual: Página dedicada para cada película con su información específica cargada directamente desde la base de datos.
+
 • Gestión de recursos y rutas: Integración correcta de hojas de estilo, imágenes y rutas relativas del proyecto para una visualización estable en el navegador.
+
 
 Tecnologías utilizadas:
 
